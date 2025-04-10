@@ -15,8 +15,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	return (s);
 }
 
-/* memset example */
-#include <stdio.h>
+/*#include <stdio.h>
 #include <string.h>
 
 int main ()
@@ -25,4 +24,4 @@ int main ()
   ft_memset (str,'-',6);
   puts (str);
   return 0;
-}
+}*/
