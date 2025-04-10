@@ -1,11 +1,25 @@
-#include <stddef.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nsaraiva <nsaraiva@student.42porto.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/10 13:06:16 by nsaraiva          #+#    #+#             */
+/*   Updated: 2025/04/10 14:44:47 by nsaraiva         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	char	*c_dest;
 	char	*c_src;
-	size_t		i;
+	size_t	i;
 
+	if (!dest && !src)
+		return (0);
 	c_dest = (char *) dest;
 	c_src = (char *) src;
 	i = 0;
@@ -15,15 +29,4 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		i++;
 	}
 	return (dest);
-}
-
-#include <stdio.h>
-#include <string.h>
-
-int main ()
-{
-  char str[] = "memcpy can be very useful......";
-  memcpy(str+14, str+19, 10);
-  puts (str);
-  return 0;
 }

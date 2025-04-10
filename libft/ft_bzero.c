@@ -1,4 +1,15 @@
-//#include <stddef.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nsaraiva <nsaraiva@student.42porto.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/10 12:57:33 by nsaraiva          #+#    #+#             */
+/*   Updated: 2025/04/10 13:00:38 by nsaraiva         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
@@ -11,14 +22,3 @@ void	ft_bzero(void *s, size_t n)
 		str[n] = '\0';
 	}
 }
-
-/*#include <stdio.h>
-#include <strings.h>
-int	main(void)
-{
-	char str[] = "Walking is Wonderfull";
-
-	ft_bzero(str+17, sizeof("full"));
-	puts(str);
-	return (0);
-}*/

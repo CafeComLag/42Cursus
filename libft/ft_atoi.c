@@ -1,4 +1,18 @@
-int	ft_isspace(char	c)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nsaraiva <nsaraiva@student.42porto.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/10 12:51:59 by nsaraiva          #+#    #+#             */
+/*   Updated: 2025/04/10 13:47:28 by nsaraiva         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+int	ft_isspace(char c)
 {
 	if (c == ' ' || (c >= '\t' && c <= '\r'))
 		return (1);
@@ -29,14 +43,4 @@ int	ft_atoi(const char *nptr)
 		nptr++;
 	}
 	return (sign * value);
-}
-
-#include <stdio.h>
-#include <stdlib.h>
-int	main(int argc, char *argv[])
-{
-	if (argc)
-	{
-		printf("%d\n%d", atoi(argv[1]), ft_atoi(argv[1]));
-	}
 }
