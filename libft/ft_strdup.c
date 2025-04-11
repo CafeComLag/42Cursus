@@ -6,24 +6,11 @@
 /*   By: nsaraiva <nsaraiva@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/04 12:06:31 by nsaraiva          #+#    #+#             */
-/*   Updated: 2025/04/04 12:06:49 by nsaraiva         ###   ########.fr       */
+/*   Updated: 2025/04/11 16:47:36 by nsaraiva.        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-int	ft_strlen(char *src)
-{
-	int	len;
-
-	len = 0;
-	while (*src)
-	{
-		len++;
-		src++;
-	}
-	return (len);
-}
+#include "libft.h"
 
 char	*ft_strdup(char	*src)
 {
@@ -41,6 +28,5 @@ char	*ft_strdup(char	*src)
 		src++;
 	}
 	*duplicated = '\0';
-	duplicated = start;
-	return (duplicated);
+	return (start);
 }

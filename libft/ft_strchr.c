@@ -6,7 +6,7 @@
 /*   By: nsaraiva <nsaraiva@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 13:09:46 by nsaraiva          #+#    #+#             */
-/*   Updated: 2025/04/10 18:41:03 by nsaraiva         ###   ########.fr       */
+/*   Updated: 2025/04/11 18:06:27 by nsaraiva.        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *) s);
 		s++;
 	}
-	if (c == '\0')
+	if ((unsigned char) c == '\0')
 		return ((char *) s);
 	return (0);
 }
