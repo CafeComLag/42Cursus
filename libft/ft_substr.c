@@ -3,7 +3,7 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*sub_string;
-	size_t		i;
+	size_t	i;
 
 	i = 0;
 	if (start >= ft_strlen(s) || len == 0)
@@ -16,7 +16,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		len = (size_t) ft_strlen(s) - start;
 	sub_string = (char *) malloc((len + 1) * sizeof(char));
 	if (!sub_string)
-		return (0); 
+		return (0);
 	while (s[start + i] && i < len)
 	{
 		sub_string[i] = s[start + i];

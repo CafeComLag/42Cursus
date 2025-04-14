@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int		compare(char s1,char const *ret)
+int	ft_compare(char s1, char const *ret)
 {
 	int	i;
 
@@ -20,88 +20,63 @@ int		compare(char s1,char const *ret)
 	while (ret[i])
 	{
 		if (s1 == ret[i])
-			return (0);
+			return (1);
 		i++;
 	}
-	return (1);
+	return (0);
 }
 
-int		count_up(char const *s1, char const *ret)
+void	ft_count(char const *s1, char const *set
+		, size_t s_s1, size_t counter[2])
 {
-	int	i;
-	int	j;
-	int	counter;
+	size_t	i;
 
 	i = 0;
-	counter = 0;
-	while (compare(s1[i], ret))
+	while (s1[i] && ft_compare(s1[i], set))
 	{
-		j = 0;
-		while (ret[j])
-		{
-			if (s1[i] == ret[j])
-			{
-				counter++;
-				break;
-			}
-			j++;
-		}
+		counter[0]++;
 		i++;
 	}
-	return (counter);
-}
-int		count_down(char const *s1, char const *ret, int end)
-{
-	int	i;
-	int	j;
-	int	counter;
-
 	i = 0;
-	counter = 0;
-	while (compare(s1[end - i], ret))
+	while (i != s_s1 && counter[0] != s_s1 && ft_compare(s1[s_s1 - i - 1], set))
 	{
-		j = 0;
-		while (ret[j])
-		{
-			if (s1[end - i] == ret[j])
-			{
-				counter++;
-				break;
-			}
-			j++;
-		}
+		counter[1]++;
 		i++;
 	}
-	return (counter);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	s_s1;
-	size_t	counter_up;
-	size_t	counter_down;
+	size_t	count[2];
 	size_t	i;
 	char	*str;
 
 	i = 0;
 	s_s1 = ft_strlen(s1);
-	counter_up = count_up(s1, set);
-	counter_down = count_down(s1, set, s_s1);
-	str = malloc(s_s1 - (counter_up + counter_down) + 1);
-	while(s1[counter_up + i] && counter_up + i < s_s1 - counter_down)
+	count[0] = 0;
+	count[1] = 0;
+	ft_count(s1, set, s_s1, count);
+	str = malloc(s_s1 - (count[0] + count[1]) + 1);
+	if (!str)
+		return (0);
+	while (s1[count[0] + i]
+		&& count[0] + i < s_s1 - count[1])
 	{
-		str[i] = s1[counter_up];
+		str[i] = s1[count[0] + i];
 		i++;
 	}
 	str[i] = '\0';
 	return (str);
 }
 
-
-/*int main (void)
+/*#include <stdio.h>
+int main (void)
 {
-	char *s1 = "   \t  \n\n \t\t  \n\n\nHello \t  Please\n Trim me !\n   \n \n \t\t\n  ";
- 	char *s2 = "Hello \t  Please\n Trim me !";
- 	char *ret = ft_strtrim(s1, " \n\t");
-	free(ret);
+	//char *s = " \n\n\nOk I ThinK \n nOw i understood!\n\t or not?:/\n   \n";
+ 	char *res = ft_strtrim(s, " \n\t");
+	//char *s = "           ";
+	//char *res = ft_strtrim(s, " ");
+	puts(res);
+	free(res);
 }*/
