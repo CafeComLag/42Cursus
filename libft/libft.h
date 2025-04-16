@@ -6,7 +6,7 @@
 /*   By: nsaraiva <nsaraiva@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 13:20:11 by nsaraiva          #+#    #+#             */
-/*   Updated: 2025/04/15 18:22:30 by nsaraiva.        ###   ########.fr       */
+/*   Updated: 2025/04/16 12:48:06 by nsaraiva.        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stddef.h>
 # include <stdlib.h>
 # include <limits.h>
+# include <stdint.h>
 
 typedef struct s_list
 {

@@ -6,7 +6,7 @@
 /*   By: nsaraiva. <nsaraiva@student.42porto.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 17:25:57 by nsaraiva.         #+#    #+#             */
-/*   Updated: 2025/04/15 21:16:51 by nsaraiva.        ###   ########.fr       */
+/*   Updated: 2025/04/16 12:18:30 by nsaraiva.        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -15,27 +15,23 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*node;
 	t_list	*t_node;
+	void	*func_del;
 
-	if (!lst)
+	if (!lst || !f || !del)
 		return (NULL);
-	node = ft_lstnew(f(lst -> content));
-	if (!node)
-	{
-		ft_lstdelone(node, del);
-		return (NULL);
-	}
-	t_node = node;
-	lst = lst -> next;
+	node = NULL;
 	while (lst)
 	{
-		t_node -> next = ft_lstnew(f(lst -> content));
-		if (!(t_node -> next))
+		func_del = f(lst -> content);
+		t_node = ft_lstnew(func_del);
+		if (!t_node)
 		{
-			ft_lstdelone(t_node -> next, del);
-			return (t_node);
+			del(func_del);
+			ft_lstclear(&node, del);
+			return (NULL);
 		}
 		lst = lst -> next;
-		t_node = t_node -> next;
+		ft_lstadd_back(&node, t_node);
 	}
 	return (node);
 }
