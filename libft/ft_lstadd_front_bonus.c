@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nsaraiva  <nsaraiva@student.42porto.com>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/16 14:23:11 by nsaraiva.         #+#    #+#             */
+/*   Updated: 2025/04/16 14:35:10 by nsaraiva         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
@@ -29,8 +41,10 @@ int	main(void)
 	node2 -> content =  &y;
 	node2 -> next = NULL;
 	ft_lstadd_front(ptr_node, node2);
-	//printf("%s de %s\n",(char *) (*ptr_node) -> content,(char *) (*ptr_node) -> next -> content);
-	printf("%d de %d\n", *(int *) (*ptr_node) -> content, *(int *) (*ptr_node) -> next -> content);
+	//printf("%s de %s\n",(char *) (*ptr_node) -> content,(char *) 
+	//									(*ptr_node) -> next -> content);
+	printf("%d de %d\n", *(int *) (*ptr_node) -> content, *(int *) 
+									(*ptr_node) -> next -> content);
 	free(node1);
 	free(node2);
 	free(ptr_node);

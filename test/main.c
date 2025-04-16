@@ -2,28 +2,6 @@
 #include <stdio.h>
 #include <bsd/string.h> 
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
-{
-	size_t	i;
-	size_t	j;
-
-	if (!*little)
-		return ((char *) big);
-	i = 0;
-	while (big[i] && i < len)
-	{
-		j = 0;
-		while (little[j] && big[i + j] == little[j] && i + j < len)
-		{
-			j++;
-		}
-		if (!little[j])
-			return ((char *) big + i);
-		i++;
-	}
-	return (0);
-}
-
 int	main(void)
 {
 	// ft_strnstr teste
@@ -71,4 +49,6 @@ int	main(void)
 	char	s2[] = " Cafe!";
 
 	printf("%s", ft_strjoin(s1, s2));*/ 
+	
+	
 }

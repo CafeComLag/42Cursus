@@ -6,13 +6,13 @@
 /*   By: nsaraiva. <nsaraiva@student.42porto.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 19:03:00 by nsaraiva.         #+#    #+#             */
-/*   Updated: 2025/04/11 21:22:49 by nsaraiva         ###   ########.fr       */
+/*   Updated: 2025/04/16 16:14:19 by nsaraiva         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_compare(char s1, char const *ret)
+static int	ft_compare(char s1, char const *ret)
 {
 	int	i;
 
@@ -26,7 +26,7 @@ int	ft_compare(char s1, char const *ret)
 	return (0);
 }
 
-void	ft_count(char const *s1, char const *set
+static void	ft_count(char const *s1, char const *set
 		, size_t s_s1, size_t counter[2])
 {
 	size_t	i;
