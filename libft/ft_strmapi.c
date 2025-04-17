@@ -6,7 +6,7 @@
 /*   By: nsaraiva <nsaraiva@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 14:47:29 by nsaraiva          #+#    #+#             */
-/*   Updated: 2025/04/16 14:53:18 by nsaraiva         ###   ########.fr       */
+/*   Updated: 2025/04/17 10:31:01 by nsaraiva         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	i = 0;
 	str = malloc(ft_strlen(s) + 1);
-	if (!str)
+	if (!str || !f)
 		return (0);
 	while (s[i])
 	{

@@ -22,3 +22,22 @@ void	ft_bzero(void *s, size_t n)
 		str[n] = '\0';
 	}
 }
+
+/*#include <stdio.h> 
+#include <string.h>
+int	main(void)
+{
+	//int	i = 0;
+	//char string[] = "";
+	//ft_bzero(string, sizeof(string));
+	//i = sizeof(string);
+	//while (i--)
+	//	if (string[i] != '\0')
+	//		printf("FAIL");
+	//printf("THE END");	
+	//bzero(NULL, 20);
+	//ft_bzero(NULL, 20);
+	
+	char string[] = "adsa";
+	bzero(string, 20);
+}*/

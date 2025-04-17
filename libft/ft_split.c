@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nsaraiva. <nsaraiva@student.42porto.com>   +#+  +:+       +#+        */
+/*   By: nsaraiva <nsaraiva@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/15 15:22:06 by nsaraiva.         #+#    #+#             */
-/*   Updated: 2025/04/16 16:09:36 by nsaraiva         ###   ########.fr       */
+/*   Created: 2025/04/15 15:22:06 by nsaraiva          #+#    #+#             */
+/*   Updated: 2025/04/17 10:12:04 by nsaraiva         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

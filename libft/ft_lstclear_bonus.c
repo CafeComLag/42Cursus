@@ -17,7 +17,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*next;
 	t_list	*previus;
 
-	if (!*lst)
+	if (!lst || !del)
 		return ;
 	next = *lst;
 	previus = next;
@@ -47,15 +47,16 @@ int	main(void)
 	char	*str2;
 
 	node1 = malloc(sizeof(t_list));
-	node2 = malloc(sizeof(t_list));
-	str1 =  malloc(1);
-	str2 =  malloc(1);
+	//node2 = malloc(sizeof(t_list));
+	//str1 =  malloc(1);
+	//str2 =  malloc(1);
 	*str1 = 'a';
 	*str2 = 'b';
-	node1 -> content = str1;
-	node2 -> content = str2;
-	node1 -> next = node2;
-	node2 -> next = NULL;
-	ft_lstclear(&node1, &new_free);
+	//node1 -> content = str1;
+	//node2 -> content = str2;
+	//node1 -> next = node2;
+	//node2 -> next = NULL;
+	//ft_lstclear(&node1, free);
+	ft_lstclear(&node1, free);
 	return (0);
 }*/

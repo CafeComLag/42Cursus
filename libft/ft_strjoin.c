@@ -6,7 +6,7 @@
 /*   By: nsaraiva <nsaraiva@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 14:50:07 by nsaraiva          #+#    #+#             */
-/*   Updated: 2025/04/16 14:51:12 by nsaraiva         ###   ########.fr       */
+/*   Updated: 2025/04/17 10:18:54 by nsaraiva         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		i;
 
 	i = 0;
-	new_s = (char *) malloc((ft_strlen(s1) + ft_strlen(s2)) * sizeof(char) + 1);
+	new_s = (char *) malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
 	if (!new_s)
 		return (0);
 	while (s1[i])
